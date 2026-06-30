@@ -22,7 +22,10 @@ Answer the user query and use necessary tools.
 
 llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash-lite", max_retries=4)
 
-tools = [search_tool, wiki_tool, save_tool]
+tools = [
+    search_tool,
+    save_tool
+]
 
 agent = create_agent(
     model=llm,
